@@ -21,7 +21,7 @@
 		<spring.version>5.1.2.RELEASE</spring.version>
 		<junit.version>4.11</junit.version>
 		<log4j.version>1.2.17</log4j.version>
-		<sonar.host.url>http://13.213.30.51/:9000/</sonar.host.url>
+		<sonar.host.url>http://13.213.30.51:9000/</sonar.host.url>
 		<sonar.login>squ_060adaa196acc10727e999497d44e53060694ffc</sonar.login>
 		 
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -83,8 +83,7 @@
 		</dependency>
 		
 		<!-- provided dependencies -->
-
-		<dependency>
+                <dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>javax.servlet-api</artifactId>
 			<version>3.1.0</version>
@@ -113,6 +112,14 @@
 		<finalName>maven-web-application</finalName>
 		
 		<plugins>
+
+			<plugin>
+                             <groupId>org.sonarsource.scanner.maven</groupId>
+                             <artifactId>sonar-maven-plugin</artifactId>
+                             <version>3.9.1.2184</version> <!-- Example of a compatible version -->
+                        </plugin>
+
+			
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
